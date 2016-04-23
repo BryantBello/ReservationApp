@@ -1,4 +1,4 @@
-var tableArray = [
+var TableArray = [
 	{
 		name:  'Jerome',
 		phoneNumber:  '9085555555',
@@ -7,4 +7,4 @@ var tableArray = [
 	}
 ];
 
-module.exports = tableArray;
+module.exports = TableArray;

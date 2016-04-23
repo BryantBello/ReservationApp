@@ -7,6 +7,8 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 var staticContentFolder;
 
+var reserve = [];
+var table = new 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -31,6 +33,12 @@ app.get('/table', function (req, res) {
 app.get('/admin', function (req, res) {
   res.sendFile(path.join(staticContentFolder + '/public/admin.html'));
 });
+
+app.post('/reservation', function (req, res){
+	console.log(req.body.name);
+});
+
+
 
 
 
