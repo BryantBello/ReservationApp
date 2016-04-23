@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">
+
+	<title>Make a reservation | Add New Name</title>
+
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="col-lg-6">
+		<div class="panel panel-default">
+			<div class="panel-heading" id="head">Make a Reservation</div>
+			<div class="panel-body">
+				<form action="/create" method="post">
+					<div class="form-group">
+						<label>Name</label>
+						<input id='name' type="name" class="form-control" name="name" placeholder="John Doe">
+					</div>
+					<div class="form-group">
+						<label>Phone</label>
+						<input id='phone' type="role" class="form-control" name="phone" placeholder="(555)555-5555">
+					</div>
+					<div class="form-group">
+						<label>People in Party</label>
+						<input id='party' type="age" class="form-control" name="party" placeholder="4">
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input id='email' type="forcePoints" class="form-control" name="division" placeholder="Johndoe@email.com">
+					</div>
+					<div class="form-group">
+						<button type="submit" class='save'>Save</button>
+					</div>
+				</form>
+			</div>
+			</div>
+		</div>
+		
+	<div class="col-lg-6">
+	</div>
+
+
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+var tableName = '';
+var tablePhone = '';
+var tableParty = '';
+var tableEmail = '';
+
+	$('.save').click(function(event){
+		event.preventDefault();
+		
+		tableName = $('#name').val().trim();
+		tablePhone = $('#phone').val().trim();
+		tableParty = $('#party').val().trim();
+		tableEmail = $('#email').val().trim();
+
+		console.log(tableName);
+		console.log(tablePhone);
+		console.log(tableParty);
+		console.log(tableEmail);
+		
+	// 	var queryURL = "http://localhost:3000/search/"+tableName;
+
+	// 	$.ajax({url: queryURL, method: 'GET'})
+	// 	.done(function(response) {
+	// 		console.log(response);
+
+
+
+	// $('.panel-body').append(response.name);
+	// $('.panel-body').append(response.age);
+	// $('.panel-body').append(response.role);
+	// $('.panel-body').append(response.forcePoints);
+
+
+	// for (var i = 0; i < response.length; i++) {
+	// 	$('.panel-body').append(response.name);
+	// };
+
+	// 	}) //.done
+
+	});
+	
+	
+
+
+</script>
+
+</html>

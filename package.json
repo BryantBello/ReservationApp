@@ -1,0 +1,27 @@
+{
+  "name": "reservation",
+  "version": "1.0.0",
+  "description": "reservation application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryantBello/ReservationApp.git"
+  },
+  "keywords": [
+    "node",
+    "opentable"
+  ],
+  "author": "bryant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BryantBello/ReservationApp/issues"
+  },
+  "homepage": "https://github.com/BryantBello/ReservationApp#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}

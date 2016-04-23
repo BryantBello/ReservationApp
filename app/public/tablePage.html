@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class= "container">
+		<div class="jumbotron">
+			<h1>Cool Resturant</h1>
+			<h4>Lists of reservations</h4>
+		</div>
+	<div class= "panel panel-default">
+		<div class= "panel-heading">
+		<h3>Current tables in use</h3>
+		</div>
+		<div class="panel-body">
+		<div class="table table-responsive">
+		<table class="table table-bordered">
+		<tr>
+			<th>Table #</th>
+			<th>Customer Id</th>
+			<th>Table Available?</th>
+		</tr>
+		<tr>
+			<td>Dummy data</td>
+			<td>Dummy 2</td>
+			<td><button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+			<div class="seatedTable"></div>
+		</table>
+		</div>
+
+		</br>
+		<div class="panel-heading">
+			<h3>Waiting List</h3>
+		</div>
+		<div class="table table-responsive">
+		<table class="table table-bordered">
+		<tr>
+			<th>Customer #</th>
+			<th>Customer Id</th>
+			<th>Time Added</th>
+		</tr>
+		<tr>
+			<td>Dummy data</td>
+			<td>Dummy 2</td>
+			<td>Moment.js</td>
+			<div class="waitingTable">
+			</div>
+		</table>
+		</div>
+		
+
+		</div>
+		</div>
+	</div>
+	</div>
+
+</body>
+	<script type="text/javascript">
+		var seatedURL ="http://localhost:3000/reservations/list"
+
+		$.ajax({url: seatedURL, method: 'GET'})
+			.done(function(response) {
+				for (var i = 0; i < 10; i++) {
+				
+					var custId= response[i]custId;
+					var count= i+1;
+					$('.seatedTable').append("<td>"+count+"</td>");
+					$('.seatedTable').append("<td>"+custId+"</td>");
+					$('.seatedTable').append('<td><button id="button+'i+'"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>');
+
+				};
+		}); 
+
+	</script>
+</html>
